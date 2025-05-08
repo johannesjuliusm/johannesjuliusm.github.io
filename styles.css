@@ -1,3 +1,4 @@
+/* Global Reset and Basic Styling */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +8,15 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #fff;
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
@@ -16,49 +24,63 @@ body {
     background-image: url('./images/hero-image.jpg');
     background-size: cover;
     background-position: center;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    color: white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
 }
 
-.overlay h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 10px;
 }
 
-.overlay p {
-    font-size: 1.2em;
+.hero p {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px;
 }
 
+/* Section Styling */
 .section {
     padding: 60px 20px;
     text-align: center;
 }
 
+/* Color Themes for Sections */
 .section-one {
-    background-color: #E3F2FD; /* Light Blue */
+    background-color: #212326; /* Dark Grey */
+    color: white;
 }
 
 .section-two {
-    background-color: #E8F5E9; /* Light Green */
+    background-color: #F25E5E; /* Red */
+    color: #F2F0D5;
 }
 
 .section-three {
-    background-color: #F5F5F5; /* Light Gray */
+    background-color: #F2F0D5; /* Yellow */
+    color: #212326;
 }
 
+.section-four {
+    background-color: #3F403A; /* Light Grey */
+    color: #F2F0D5;
+}
+
+.section-five {
+    background-color: #212326; /* Dark Grey */
+    color: #F2F0D5;
+}
+
+.section-six {
+    background-color: #000000; /* Black */
+    color: white;
+}
+
+/* Typography */
 h2 {
     font-size: 2em;
     margin-bottom: 0.5em;
@@ -66,4 +88,57 @@ h2 {
 
 p {
     font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .section {
+        padding: 30px 10px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
 }
